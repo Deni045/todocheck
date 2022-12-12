@@ -9,8 +9,10 @@ function Check() {
     }
 
     return(
-         <input type="checkbox" checked={Check} onChange={handlerCheck} />
+         <input type="checkbox" checked={check} onChange={handlerCheck} />
     )
 }
 
 export default Check
+
+

@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import './App.css';
 
+
 function App() {
 
     const [todos, setTodos] = useState([
         {
             text: 'HTML',
-            done: true
+           done: true
         },
         {
             text: 'JS',
@@ -14,7 +15,7 @@ function App() {
         },
         {
             text: 'React',
-            done: true
+           done: true 
         },
     ])
 
@@ -41,6 +42,12 @@ function App() {
         setCheck(!check)
     }
 
+    
+  
+    
+   
+     
+
 
 
 
@@ -52,7 +59,7 @@ function App() {
             <button onClick={handlerBtn}>
                 add
             </button>
-            <input type="checkbox" checked={check} onChange={handlerCheck} />
+            <input type="checkbox" checked={check} onChange={handlerCheck}  />
         </div>
     </div>
 
@@ -62,10 +69,13 @@ function App() {
             return(
                 <li>
                     {item.text}
-                    <input type="checkbox" checked={item.done} />
+                   
+                    <input type="checkbox" checked={check}  />
                 </li>
             )
         })}
+
+       
     </div>
     </>
     
