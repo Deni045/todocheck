@@ -25,27 +25,30 @@ function App() {
 
     const [text, setText] = useState('')
 
-    function handlerBtn() {
+    function handlerBtn(e) {
         setTodos([
             {
                 text: text
             },
             ...todos
         ])
+       
     }
 
 
 
-    const [check, setCheck] = useState(true)
+    const [check, setCheck] = useState(false)
 
     function handlerCheck() {
         setCheck(!check)
     }
 
-    
-  
-    
-   
+    const [done, setDone] = useState(false)   
+
+    function handlerDone( ) {
+        if(check.checked)
+        setDone(true)
+    }
      
 
 
@@ -59,7 +62,7 @@ function App() {
             <button onClick={handlerBtn}>
                 add
             </button>
-            <input type="checkbox" checked={check} onChange={handlerCheck}  />
+            <input id='box' type="checkbox" checked={check} onChange={handlerCheck}  />
         </div>
     </div>
 
@@ -70,7 +73,7 @@ function App() {
                 <li>
                     {item.text}
                    
-                    <input type="checkbox" checked={check}  />
+                    <input type="checkbox" checked={done}  onChange={handlerDone} />
                 </li>
             )
         })}
