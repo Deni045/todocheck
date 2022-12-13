@@ -37,7 +37,7 @@ function App() {
 
 
 
-    const [check, setCheck] = useState(false)
+    const [check, setCheck] = useState(true)
 
     function handlerCheck() {
         setCheck(!check)
@@ -49,10 +49,6 @@ function App() {
         if(check.checked)
         setDone(true)
     }
-     
-
-
-
 
   return (
     <>
@@ -66,7 +62,6 @@ function App() {
         </div>
     </div>
 
-
     <div>
         {todos.map(item => {
             return(
@@ -78,7 +73,6 @@ function App() {
             )
         })}
 
-       
     </div>
     </>
     
