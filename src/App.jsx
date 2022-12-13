@@ -27,6 +27,7 @@ function App() {
     const [text, setText] = useState('')
 
     function handlerBtn(e) {
+        
         setTodos([
             {
                 text: text,
@@ -41,6 +42,11 @@ function App() {
         setCheck(!check)
     }
 
+    const tooot = (e) => {
+        if(e.key == "Enter"){
+            handlerBtn(e)
+        }
+    }
 
 
 
@@ -48,7 +54,7 @@ function App() {
     <>
     <div>
         <div>
-            <input type="text" value={text} onChange={handlerChange} />
+            <input type="text" value={text} onKeyDown={tooot} onChange={handlerChange} />
             <button onClick={handlerBtn}>
                 add
             </button>
