@@ -8,15 +8,15 @@ function App() {
     const [todos, setTodos] = useState([
         {
             text: 'HTML',
-           done: check
+           done: true
         },
         {
             text: 'JS',
-            done: check
+            done: false
         },
         {
             text: 'React',
-           done: check 
+           done: true 
         },
     ])
 
